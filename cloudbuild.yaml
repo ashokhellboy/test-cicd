@@ -1,4 +1,4 @@
 steps:
 - name: 'us-docker.pkg.dev/cloud-builders/docker'
-  args: ['build', '-t' 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache' './testfolder']
+  args: ['build', '-t' 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache' './testfolder' ]
   id: 'Build docker image'
