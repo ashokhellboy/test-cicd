@@ -4,5 +4,5 @@ steps:
   id: 'Build docker image'
 
 
-  options:
-    logging: NONE        
+options:
+  logging: NONE        
