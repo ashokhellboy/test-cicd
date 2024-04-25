@@ -1,5 +1,6 @@
 FROM ubuntu:22.04
 
+#creating a workdir named test
 WORKDIR /test
 
 RUN apt-get update
