@@ -1,5 +1,5 @@
 steps:
-- name: 'us-central1-docker.pkg.dev/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache', './testfolder']
   id: 'Build docker image'
 
