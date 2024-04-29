@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: us-central1-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-nginx
+          image: us-central1-docker.pkg.dev/shared-vpc-project-415009/test-repo/nginx
           ports:
             - containerPort: 8080
 
