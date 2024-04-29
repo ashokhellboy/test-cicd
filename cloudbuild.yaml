@@ -5,11 +5,18 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache']
   id: 'Push docker image'
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['create', 'deployment', 'mytestdeploy', '--image=us-docker.pkg.dev/shared-vpc-project-415009/test-repo/nginx']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-test1'    
-
+  #- name: 'gcr.io/cloud-builders/kubectl'
+  #args: ['create', 'deployment', 'mytestdeploy', '--image=us-docker.pkg.dev/shared-vpc-project-415009/test-repo/nginx']
+  #env:
+  #- 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+  #- 'CLOUDSDK_CONTAINER_CLUSTER=cluster-test1'    
+- name: 'google/cloud-sdk:latest'
+  entrypoint: 'sh'
+  args:
+  - -xe
+  - -c
+  - |
+    gcloud deploy apply --file ./pipeline.yaml --region=us-central1-c
+    gcloud deploy apply --file ./dev.yaml --region=us-central1-c    
 options:
   logging: CLOUD_LOGGING_ONLY        

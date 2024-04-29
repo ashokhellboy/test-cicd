@@ -1,0 +1,7 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: dev
+gke: 
+  cluster: projects/shared-vpc-project-415009/locations/us-central1-c/cluster-test1
+
