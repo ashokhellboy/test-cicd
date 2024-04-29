@@ -17,6 +17,7 @@ steps:
   - -c
   - |
     gcloud deploy apply --file ./pipeline.yaml --region=us-central1
-    gcloud deploy apply --file ./dev.yaml --region=us-central1  
+    gcloud deploy apply --file ./dev.yaml --region=us-central1
+    gcloud deploy releases create 'app-release-test' --delivery-pipeline=test-delivery-pipeline --region=us-central1  
 options:
   logging: CLOUD_LOGGING_ONLY        
