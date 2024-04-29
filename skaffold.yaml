@@ -4,4 +4,4 @@ deploy:
   kubectl: {}
 manifests:
   rawYaml:
-  - k8s.yaml
+  - ./kubernetes/*
