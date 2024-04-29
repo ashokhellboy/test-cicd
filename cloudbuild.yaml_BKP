@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apach', './testfolder']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache', './testfolder']
   id: 'Build docker image'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache']
