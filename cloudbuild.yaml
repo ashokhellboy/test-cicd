@@ -6,7 +6,7 @@ steps:
   args: ['push', 'us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache']
   id: 'Push docker image'
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/testdeploy', 'my-image=us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache']
+  args: ['create', 'deployment', 'mytestdeploy', '--image=us-docker.pkg.dev/shared-vpc-project-415009/test-repo/test-apache']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-test1'    
